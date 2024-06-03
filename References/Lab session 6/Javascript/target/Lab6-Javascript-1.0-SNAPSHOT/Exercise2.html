@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit this template
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Exercise 2</title>
+    </head>
+    <body>
+        <div style="text-align:center">
+            <button type="button" id="startBtn" onclick="startTimer()">Start counting down 1:00 [mm:ss]</button>
+            <hr>
+        </div>
+
+        <div style="text-align:center" id="content">
+            <form method="GET" action="Result.jsp">
+
+                <div id="formTest">
+                    <h3>These are test question</h3>
+                    <table  style="padding-left: 35%; padding-right: 35%">
+                        <tr>
+                            <td>Question 1: How many people are there in your class?</td>
+                            <td colspan="2"><input type="text" name="q1"/></td>
+                        </tr>
+                        <tr>
+                            <td>Question 2: How do you feel now?</td>
+                            <td><input type="radio" name="q2" value="Good"/>Good</td>
+                            <td><input type="radio" name="q2" value="Bad"/>Bad</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td>
+                                <input value="submit" type="submit">
+                            </td>
+                        </tr>
+                    </table>
+                    <a href='index.html'>Return to homepage</a>
+                </div>
+
+                <div id="formSubmit" style="display: none">
+                    <h3>Time is up !!!</h3>
+                    <input type="submit" name="submit" value="Submit your answer"/>
+                </div>
+            </form>
+        </div>
+
+        <script type="text/javascript">
+            var startBtn = document.getElementById('startBtn');
+            var content = document.getElementById('content');
+            var questionField = document.getElementById('formTest');
+            var submitField = document.getElementById('formSubmit');
+
+            var timeRemain = 60;
+
+            const startTimer = () => {
+                content.style.display = 'block';
+                let refreshBtn = setInterval(() => {
+                    const mmss = (new Date(timeRemain * 1000)).toISOString().substr(14, 5);
+                    startBtn.innerHTML = `The remaining time: ${mmss} [mm:ss]`;
+                    if (timeRemain === 0) {
+                        clearInterval(refreshBtn);
+                        formTest.style.display = 'none';
+                        formSubmit.style.display = 'block';
+                        startBtn.style.display = 'none';
+                    }
+                    timeRemain -= 1;
+                }, 1000);
+            };
+        </script>
+    </body>
+</html>
+

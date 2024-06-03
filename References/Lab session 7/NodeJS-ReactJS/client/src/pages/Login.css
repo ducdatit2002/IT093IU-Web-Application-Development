@@ -1,0 +1,35 @@
+body {
+    background-color: bisque;
+}
+
+.app {
+    margin: 0 auto;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+}
+
+.app h1 {
+    margin-top: 150px;
+    font-size: 30px;
+    font-weight: bold;
+    color: #cf9062;
+}
+
+input {
+    margin-top: 10px;
+    width: 300px;
+    height: 30px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding-left: 10px;
+}
+
+button {
+    margin-top: 30px;
+    width: 300px;
+    height: 40px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #cf9062;
+    color: white;
+}

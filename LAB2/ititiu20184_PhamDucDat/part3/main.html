@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technology News Section</title>
+    <style>
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            background-color: #f2f2f2;
+            padding: 10px;
+            font-family: Arial, sans-serif;
+        }
+
+        .navbar a {
+            text-decoration: none;
+            color: #000;
+            padding: 8px 16px;
+        }
+
+        .navbar a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+        }
+
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+
+        .news-item {
+            background-color: #fff;
+            margin-bottom: 15px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: center;
+        }
+
+        .news-image {
+            width: 30%;
+        }
+
+        .news-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .news-content {
+            padding: 20px;
+            width: 70%;
+        }
+
+        .news-content h2 {
+            color: #333;
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .news-content p {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        .news-content a {
+            text-decoration: none;
+            color: #000;
+            font-weight: bold;
+        }
+
+        .news-content a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #333;
+            color: #fff;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="navbar">
+        <a href="thoi-su.html">Thời sự</a>
+        <a href="the-gioi.html">Thế giới</a>
+        <a href="kinh-te.html">Kinh tế</a>
+        <a href="doi-song.html">Đời sống</a>
+        <a href="suc-khoe.html">Sức khỏe</a>
+        <a href="giao-duc.html">Giáo dục</a>
+        <a href="du-lich.html">Du lịch</a>
+        <a href="van-hoa.html">Văn hóa</a>
+        <a href="giai-tri.html">Giải trí</a>
+        <a href="the-thao.html">Thể thao</a>
+        <a href="cong-nghe.html">Công nghệ</a>
+    </div>
+    <div class="container">
+        <!-- First News Item -->
+        <div class="news-item">
+            <div class="news-image">
+                <img src="tech.jpeg" alt="Tech Strategy Conference">
+            </div>
+            <div class="news-content">
+                <h2>Strategy to Support Tech Businesses Going Global</h2>
+                <p>The government has launched a new initiative aimed at fostering digital enterprises and facilitating
+                    their expansion on the global stage.</p>
+                <a href="detail-tech-strategy.html">Read more</a>
+            </div>
+        </div>
+
+        <!-- Second News Item -->
+        <div class="news-item">
+            <div class="news-image">
+                <img src="youtube.jpeg" alt="YouTube TV on smartphone screen">
+            </div>
+            <div class="news-content">
+                <h2>YouTube Content Creators to Face New Taxation Rules</h2>
+                <p>Vietnamese YouTubers may be subject to new tax regulations if they do not have a registered address
+                    in the United States, amidst ongoing changes in digital revenue laws.</p>
+                <a href="detail-youtuber-tax.html">Read more</a>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        Pham Duc Dat - All rights reserved &copy; 2024
+    </footer>
+
+</body>
+
+</html>

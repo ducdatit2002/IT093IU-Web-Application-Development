@@ -1,0 +1,24 @@
+[{
+  "_id": {
+    "$oid": "627cb6070c8086aa55b00cae"
+  },
+  "studentName": "User",
+  "studentID": "ITITIU012023",
+  "studentPass": "ITITIU012023",
+  "courseID": [
+    "WAD01",
+    "OOAD01",
+    "DSA01",
+    "PPL01"
+  ]
+},{
+  "_id": {
+    "$oid": "627f5e4ca00b185e3ff26136"
+  },
+  "studentName": "User",
+  "studentID": "ITITIU012022",
+  "studentPass": "ITITIU012022",
+  "courseID": [
+    "WAD01"
+  ]
+}]

@@ -1,0 +1,23 @@
+body{
+}
+
+.container {
+    font-size: 15px;
+    font-style: bold;
+}
+
+.line {
+    border-top: 3px solid red;
+}
+
+h1 {
+    color: black;
+}
+
+table {
+    text-align: left;
+}
+
+
+
+

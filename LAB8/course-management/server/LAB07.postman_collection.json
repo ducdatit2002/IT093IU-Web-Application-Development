@@ -1,0 +1,133 @@
+{
+	"info": {
+		"_postman_id": "8023c173-6bb5-43d3-a17f-ac6389da1dd3",
+		"name": "LAB07",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "30124089"
+	},
+	"item": [
+		{
+			"name": "Get all courses",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:4000/api/v1/courses/courses"
+			},
+			"response": []
+		},
+		{
+			"name": "Get courses by id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4000/api/v1/courses/courses/:id",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"v1",
+						"courses",
+						"courses",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "CH011"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create courses",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": \"IT001IU\",\n    \"course_level_id\": 1,\n    \"name\": \"Intro to Computing\",\n    \"name_vn\": \"Nhập môn máy tính\",\n    \"credit_theory\": 3,\n    \"credit_lab\": 0,\n    \"description\": \"This one‐semester course is designed for engineering students those who are pursuing a non‐ chemistry engineering degree such as information technology, bio‐technology, civil, biomedical, electronic and telecommunication engineering. The course will introduce the basic principles of chemistry and connect those principles to issues in engineering professions. The related lab‐work is not included in this course.\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:4000/api/v1/courses/courses"
+			},
+			"response": []
+		},
+		{
+			"name": "Update / Edit course by id",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": \"IT001IU\",\n    \"course_level_id\": 1,\n    \"name\": \"Intro to Computing\",\n    \"name_vn\": \"Nhập môn máy tính\",\n    \"credit_theory\": 4,\n    \"credit_lab\": 0,\n    \"description\": \"Môn học máy tính\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/api/v1/courses/courses/:id",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"v1",
+						"courses",
+						"courses",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "IT001IU"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete courses by id",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4000/api/v1/courses/courses/:id",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"v1",
+						"courses",
+						"courses",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "IT001IU"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

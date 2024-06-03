@@ -1,0 +1,28 @@
+body{
+    background-color:pink
+}
+
+.container {
+    font-size: 15px;
+    font-style: bold;
+}
+
+.line {
+    border-top: 1px solid red;
+}
+
+.header-table {
+    padding-top: 20px;
+}
+
+header > h1 {
+    color: black;
+}
+
+table, td, tr {
+    text-align: left;
+}
+
+
+
+

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Registration Form</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="registration-form">
+    <h2>School of Computer Science & Engineering</h2>
+    <hr/>
+    <h3>Register Form</h3>
+    <form action="/submit-form" method="post">
+        <label for="full-name">Full Name</label>
+        <input type="text" id="full-name" name="full-name" required>
+
+        <label for="id">ID</label>
+        <input type="text" id="id" name="id" required>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+
+        <label>Gender</label>
+        <div class="gender">
+            <input type="radio" id="male" name="gender" value="male">
+            <label for="male">Male</label>
+            <input type="radio" id="female" name="gender" value="female">
+            <label for="female">Female</label>
+        </div>
+
+        <label for="field-of-study">Field of study</label>
+        <select id="field-of-study" name="field-of-study">
+            <option value="cs">Computer Science</option>
+            <option value="eng">Engineering</option>
+            <!-- Add other fields as necessary -->
+        </select>
+        <div class="subjects">
+            <input type="checkbox" id="principle-of-ee-1" name="subjects" value="principle-of-ee-1">
+            <label for="principle-of-ee-1">Principle of EE 1</label>
+        
+            <input type="checkbox" id="computer-network" name="subjects" value="computer-network">
+            <label for="computer-network">Computer Network</label>
+        
+            <input type="checkbox" id="web-app-dev" name="subjects" value="web-app-dev">
+            <label for="web-app-dev">Web Application Development</label>
+        
+            <input type="checkbox" id="oop" name="subjects" value="oop">
+            <label for="oop">Object Oriented Programming</label>
+        
+            <input type="checkbox" id="computer-graphics" name="subjects" value="computer-graphics">
+            <label for="computer-graphics">Computer Graphics</label>
+        </div>        
+
+        <label for="comments">Comments</label>
+        <textarea id="comments" name="comments"></textarea>
+
+        <div class="form-actions">
+            <button type="submit">Submit</button>
+            <button type="button" onclick="window.location.reload();">Cancel</button>
+        </div>
+    </form>
+</div>
+
+</body>
+</html>

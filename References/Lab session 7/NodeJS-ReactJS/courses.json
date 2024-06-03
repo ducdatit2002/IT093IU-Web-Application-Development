@@ -1,0 +1,43 @@
+[{
+  "_id": {
+    "$oid": "627ead584229595b2d8f7254"
+  },
+  "c_ID": "WAD01",
+  "c_credit": "4",
+  "c_name": "W.A.D"
+},{
+  "_id": {
+    "$oid": "627eb1a34229595b2d8f7255"
+  },
+  "c_ID": "PPL01",
+  "c_credit": "4",
+  "c_name": "P.P.L"
+},{
+  "_id": {
+    "$oid": "627f1f3799238f053fd1b7d1"
+  },
+  "c_ID": "OOAD01",
+  "c_credit": "4",
+  "c_name": "O.O.A.D"
+},{
+  "_id": {
+    "$oid": "627f1f4999238f053fd1b7d2"
+  },
+  "c_ID": "DSA01",
+  "c_credit": "4",
+  "c_name": "D.S.A"
+},{
+  "_id": {
+    "$oid": "627f5e13a00b185e3ff26132"
+  },
+  "c_ID": "OOP01",
+  "c_credit": "4",
+  "c_name": "O.O.P"
+},{
+  "_id": {
+    "$oid": "627f5e24a00b185e3ff26133"
+  },
+  "c_ID": "PDM01",
+  "c_credit": "4",
+  "c_name": "P.D.M"
+}]

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Course Form</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f8ff;
+            margin: 20px;
+        }
+        h1 {
+            color: #4b0082;
+            text-align: center;
+        }
+        form {
+            display:flex;
+            flex-direction: column;
+            align-items: center;
+            width: 700px;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: #333;
+        }
+        input[type="text"], input[type="number"], textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            text-align: center;
+            text-decoration: none;
+            outline: none;
+            color: #fff;
+            background-color: black;
+            border: none;
+            border-radius: 15px;
+            box-shadow: 0 9px #999;
+        }
+        button:hover {background-color: #3e8e41}
+        button:active {
+            background-color: #3e8e41;
+            box-shadow: 0 5px #666;
+            transform: translateY(4px);
+        }
+        .back-link {
+            display: inline-block;
+            margin-top: 10px;
+            color: #0066cc;
+            text-decoration: none;
+        }
+        .back-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+<h1 th:text="${course.id == null} ? 'Add New Course' : 'Edit Course'"></h1>
+<form th:action="@{/courses}" th:object="${course}" method="post">
+
+    <div style="width: 90%;">
+        <div th:if="${course.id == null}">
+            <label for="id">ID:</label>
+            <input type="text" id="id" th:field="*{id}" required/>
+        </div>
+        <div th:if="${course.id != null}">
+            <input type="hidden" th:field="*{id}" />
+        </div>
+
+        <label for="name">Name:</label>
+        <input type="text" id="name" th:field="*{name}" required/>
+
+        <label for="nameVN">Name VN:</label>
+        <input type="text" id="nameVN" th:field="*{nameVN}" required/>
+
+        <label for="creditTheory">Credit Theory:</label>
+        <input type="number" id="creditTheory" th:field="*{creditTheory}" required/>
+
+        <label for="creditLab">Credit Lab:</label>
+        <input type="number" id="creditLab" th:field="*{creditLab}" required/>
+
+        <label for="description">Description:</label>
+        <textarea cols="10" id="description" th:field="*{description}" required></textarea>
+    </div>
+
+
+    <div style="text-align: center;">
+        <button type="submit">Save</button>
+    </div>
+</form>
+<div style="text-align: center;">
+    <a href="/lab6/lab6/src/main/resources/views/courses.html" class="back-link">Back to Courses List</a>
+</div>
+</body>
+</html>
